@@ -97,3 +97,8 @@ ON o.CustomerID = c.CustomerID
 WHERE o.OrderID IS NULL; --Hier schauen welche Kunden noch keine Bestellungen getätigt haben
 
 SELECT * FROM Orders CROSS JOIN Customers; --Alle Bestellungen mit allen Kunden kombinieren (Kreuzprodukt)
+
+--1. Tabellen finden die kombiniert werden sollen
+--2. JOIN erstellen (SELECT * FROM Tabelle1 INNER JOIN Tabelle2 ON Tabelle1.Key = Tabelle2.Key)
+--3. Sinnvolle Spalten wählen
+--4. Statement weiter dekorieren -> WHERE/GROUP BY/ORDER BY hinzufügen
