@@ -52,6 +52,12 @@ SELECT Phone FROM Suppliers
 UNION
 SELECT HomePhone FROM Employees; --Mehr als zwei Tabellen mit UNION kombinieren
 
+SELECT Phone AS P1 FROM Customers --AS bei UNION: Das AS beim ersten SELECT wird akzeptiert, die anderen werden verworfen
+UNION
+SELECT Phone AS P2 FROM Suppliers --P2 wird verworfen
+UNION
+SELECT HomePhone AS P3 FROM Employees; --P3 wird verworfen
+
 SELECT Country FROM Customers
 INTERSECT
 SELECT Country FROM Employees; --Finde alle Länder in denen wir Kunden und Mitarbeiter haben
